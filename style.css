@@ -7,62 +7,111 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100vw;
 }
+
 .cv-container {
     display: flex;
-    width: 800px;
+    width: 100vw;
+    height: 100vh;
     background: white;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    border-radius: 0;
     overflow: hidden;
 }
+
+/* Bagian kiri */
 .left-section {
     width: 35%;
-    background: #2c3e50;
+    background: #354f68;
     color: white;
     padding: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
+
 .left-section img {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 3px solid white;
 }
+
 .left-section h2 {
-    font-size: 20px;
+    font-size: 24px;
     margin-top: 10px;
 }
-.contact-info, .profile {
+
+/* Data Pribadi */
+.profile {
     text-align: left;
     margin-top: 20px;
+    width: 100%;
 }
-.contact-info p, .profile p {
-    font-size: 14px;
-    line-height: 1.5;
+
+.profile h3 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
+
+/* Perbaikan jarak Nama dan Muzhar Maulana */
+.nama-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.nama-container p {
+    margin: 0; /* Hilangkan margin berlebih */
+    font-size: 16px;
+}
+
+.nama-container .label {
+    font-weight: bold;
+    margin-bottom: 2px; /* Atur jarak kecil di bawah label */
+}
+
+.nama-container .value {
+    margin-top: 0;
+}
+
+/* Bagian kanan */
 .right-section {
     width: 65%;
-    padding: 20px;
+    padding: 40px;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
+
 .right-section h1 {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 5px;
 }
+
 .right-section h2 {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 10px;
     color: #2c3e50;
 }
+
 .right-section p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
 }
+
 ul {
     list-style: none;
     padding: 0;
 }
+
 li {
-    padding: 5px 0;
+    padding: 8px 0;
+    font-size: 16px;
 }
