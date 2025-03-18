@@ -23,7 +23,7 @@ body {
 /* Bagian kiri */
 .left-section {
     width: 35%;
-    background: linear-gradient(135deg, #394472, #2575fc);
+    background: linear-gradient(135deg, #0f111d, #2575fc);
     color: white;
     padding: 20px;
     text-align: center; /* Untuk memusatkan teks */
