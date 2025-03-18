@@ -5,22 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Saya</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Link CDN Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <div class="cv-container">
         <div class="left-section">
             <img src="kim_dami.jpg" alt="Foto Muzhar">
             <h2>Muzharrrr</h2>
-        </div>
-        <div class="right-section">
-            <div class="profile">
-                <h2>Data Pribadi</h2>
-                <p><strong>Nama :</strong> Muzhar Maulana</p>
-                <p><strong>Tempat, Tgl lahir :</strong> Kendari 25 January 2006</p>
-                <p><strong>Alamat :</strong> Jl. Dr. Sutomo</p>
+            
+            <!-- Ikon Media Sosial -->
+            <div class="social-icons">
+                <a href="https://www.instagram.com/muzarmaulana_" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/muzhar" target="_blank" class="social-link">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://wa.me/6281234567890" target="_blank" class="social-link">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
             </div>
-            <div class="riwayat-container">
-                <h2>Riwayat Pendidikan</h2>
+        </div>
+        
+        <div class="right-section">
+            <div class="about fade-in section-hover">
+                <h2 class="section-title">Tentang Saya</h2>
+                <p>Saya adalah seorang mahasiswa semester 4 dari jurusan ilmu komputer fakultas matematika dan ilmu pengetahuan</p>
+            </div>
+
+            <div class="profile fade-in section-hover">
+                <h2 class="section-title">Data Pribadi</h2>
+                <p>Nama : Muzhar Maulana</p>
+                <p>Tempat, Tgl lahir : Kendari, 25 Januari 2006</p>
+                <p>Alamat : Jl. Dr. Sutomo</p>
+            </div>
+
+            <div class="riwayat-container fade-in section-hover">
+                <h2 class="section-title">Riwayat Pendidikan</h2>
                 <ul>
                     <li>Universitas Halu Oleo</li>
                     <li>SMAN 6 Kendari</li>
@@ -29,36 +52,50 @@
                     <li>TK Sanda Masumu</li>
                 </ul>
             </div>     
-            <div class="kontak-container">
-                <h2>Kontak</h2>
+
+            <div class="kontak-container section-hover">
+                <h2 class="section-title">Kontak</h2>
                 <ul>
                     <li>Email   : Musarmaulana@gmail.com</li>
                     <li>Telepon : 0812-3456-7890</li>
-                    <li>Alamat  : Jl. Dr. Sutomo, Kendari</li>
                 </ul>
-                <a href="hubungi.html" class="btn-hubungi">Hubungi</a>
+                <div class="btn-container">
+                    <a href="hubungi.html" class="btn-hubungi">Hubungi</a>
+                </div>
             </div> 
+
         </div>       
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Cek apakah ada parameter status=success di URL
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get("status") === "success") {
-                let successMessage = document.getElementById("success-message");
-                successMessage.style.display = "block";
+        const sections = document.querySelectorAll(".section-hover");
 
-                // Sembunyikan setelah 3 detik
-                setTimeout(() => {
-                    successMessage.style.display = "none";
+        sections.forEach(section => {
+            section.addEventListener("mouseenter", function() {
+                this.style.backgroundColor = "#f0f0f0"; // Warna background saat hover
+                this.style.transition = "background-color 0.3s ease-in-out, transform 0.3s ease-in-out";
+                this.style.boxShadow = "0px 4px 10px rgba(0, 0, 0, 0.2)";
+                this.style.transform = "scale(1.02)";
 
-                    // Hapus parameter status dari URL tanpa reload halaman
-                    const newUrl = window.location.origin + window.location.pathname;
-                    window.history.replaceState({}, document.title, newUrl);
-                }, 3000);
-            }
+                const title = this.querySelector(".section-title");
+                if (title) {
+                    title.style.color = "#007BFF"; // Warna teks saat hover
+                    title.style.transition = "color 0.3s ease-in-out";
+                }
+            });
+
+            section.addEventListener("mouseleave", function() {
+                this.style.backgroundColor = "white"; // Kembali ke warna asli
+                this.style.boxShadow = "none";
+                this.style.transform = "scale(1)";
+
+                const title = this.querySelector(".section-title");
+                if (title) {
+                    title.style.color = "black"; // Warna teks kembali ke hitam
+                }
+            });
         });
     </script>
+
 </body>
 </html>

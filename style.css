@@ -133,13 +133,76 @@ li {
     width: 100%;
 }
 
-.riwayat-container li {
-    padding: 8px 0;
-    border-bottom: 1px solid #110e0e;
+
+
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
-.riwayat-container li:last-child {
-    border-bottom: 1px solid #110e0e; /* Tambahkan border bawah kembali */
+.social-icons a {
+    color: #333;
+    font-size: 24px;
+    transition: 0.3s;
+    text-decoration: none;
 }
+
+.social-icons a:hover {
+    color: #2575fc;
+}
+.social-icons a {
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #caf107;
+}
+/* Efek Hover yang Rapi */
+.section-hover {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px; /* Menambah jarak antar elemen agar tidak bertumpuk */
+    position: relative;
+    z-index: 1; /* Pastikan elemen tetap di atas tanpa saling menimpa */
+}
+
+/* Warna Hover */
+.section-hover:hover {
+    background-color: #f0f0f0; /* Warna latar belakang saat hover */
+    color: #333; /* Warna teks saat hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan agar hover terlihat lembut */
+}
+
+/* Efek Hover pada Judul */
+.section-hover:hover .section-title {
+    color: #007BFF; /* Ubah warna judul saat hover */
+}
+
+/* Mencegah Efek Hover pada Tombol "Hubungi" */
+.btn-hubungi {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-hubungi:hover {
+    background-color: #0056b3;
+}
+
+/* Tambahkan Spasi Antar Bagian */
+.about, .profile, .riwayat-container, .kontak-container {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
 
 
